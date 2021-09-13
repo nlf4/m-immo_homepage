@@ -1,15 +1,12 @@
 .news {
 	background-image: url('/images/green-bg.png');
 	
-	
-
 	&-content {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 	}
 	
-
 	&-heading h2 {
 		font-size: 2.5rem;
 		margin: 2rem 0 3.5rem 0;
@@ -81,6 +78,6 @@
 	button {
 		border: none;
 		width: 10rem;
-		margin-top: 2rem;
+		margin-top: 3rem;
 	}
 }

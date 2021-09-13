@@ -20,6 +20,11 @@
   
     &-logo {
       display: inline-block;
+
+      img {
+        width: 100px;
+      }
+      
   
       @include breakpoint-down(medium) {
         margin-bottom: 1.875rem;
