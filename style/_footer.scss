@@ -1,0 +1,102 @@
+.ftr {
+    background-color: $dark-color;
+    color: $white;
+    padding: 2.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  
+    .container {
+      @include breakpoint-up(large) {
+        display: flex;
+        flex-direction: row;
+        
+      }
+    }
+  
+    a {
+      color: $white;
+    }
+  
+    &-logo {
+      display: inline-block;
+  
+      @include breakpoint-down(medium) {
+        margin-bottom: 1.875rem;
+      }
+  
+      @include breakpoint-up(large) {
+        
+      }
+    }
+  
+  
+    &-nav-col {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      font-size: 0.9375rem;
+      margin: 0 15px;
+  
+      @include breakpoint-up(large) {
+        justify-content: space-between;
+        align-items: flex-start;
+        
+      }
+  
+     
+      a {
+        line-height: 2.25;
+        transition: color 150ms ease-in-out;
+  
+        &:hover {
+          color: $accent-color;
+        }
+      }
+    }
+
+    &-social {
+
+        margin-top: 1.875rem;
+        @include breakpoint-down(medium) {
+          margin-bottom: 1.875rem;
+          
+        }
+    
+        @include breakpoint-up(large) {
+          
+        }
+    
+        a {
+          display: inline-block;
+          height: 1.25rem;
+    
+          svg path {
+            transition: fill 150ms ease-in-out;
+          }
+    
+          &:hover svg path {
+            fill: $accent-color;
+          }
+        }
+    
+        a:not(:last-child) {
+          margin-right: 1rem;
+        }
+      }
+  
+    &-copyright {
+      font-size: 0.8125rem;
+      color: $grayishBlue;
+      margin-top: 1.3rem;
+  
+      @include breakpoint-up(large) {
+       
+        
+      }
+    }
+  
+    
+  }
+  

@@ -1,0 +1,159 @@
+
+  @import "config";
+  @import "listings";
+  @import "news";
+  @import "mobile";
+  @import "mixins";
+  @import "footer";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $font-stack;
+    line-height: 1.6;
+    background-color: $light-color;
+}
+
+.main-header {
+    background-color: $primary-color;
+    color: #fff;
+    height: 600px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/hero-bg.jpg");
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        ul {
+            display: flex;
+            list-style-type: none;
+        }
+
+        li {
+            padding: 15px;
+        }
+
+        a:hover {
+            color: $accent-color;
+        }
+    }
+
+    a {
+        color: #fff;
+    }
+
+    .hero {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+
+        h1 {
+            font-size: 50px;
+
+        }
+    }
+
+    
+}
+
+a {
+    text-decoration: none;
+}
+
+.header-container {
+    max-width: 100%;
+    padding: 0 30px;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+%btn {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 8px 20px;
+    margin: 3px;
+
+    &:hover {
+        transform: scale(.98);
+    }
+}
+
+.btn-primary {
+    @extend %btn;
+    background-color: lighten($primary-color, 10%);
+}
+
+.btn-secondary {
+    @extend %btn;
+    background-color: $secondary-color
+}
+
+
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/hero-bg.jpg");
+  height: 50%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+
+.main-nav {
+    background-color: rgba(51, 51, 51, 0.322);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/hero-bg.jpg");
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+//   .main-nav a {
+//     float: left;
+//     display: block;
+//     color: #f2f2f2;
+//     text-align: center;
+//     padding: 14px 16px;
+//     text-decoration: none;
+//     font-size: 17px;
+//   }
+  
+  /* Change the color of links on hover */
+//   .main-nav a:hover {
+//     background-color: #ddd;
+//     color: black;
+//   }
+  
+  /* Add an active class to highlight the current page */
+//   .main-nav a.active {
+//     background-color: #04AA6D;
+//     color: white;
+//   }
+  
+  /* Hide the link that should open and close the main-nav on small screens */
+  .main-nav .icon {
+    display: none;
+  }
+
+  
+
+
+
+
