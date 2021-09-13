@@ -1,0 +1,40 @@
+.contact {
+	background-color: $light-color;
+
+	form {
+		position: relative;
+		width: 40rem;
+		background: $light-color;
+		border-radius: .7rem;
+		margin: 0 auto;
+	  }
+
+	  input {
+		height: 3rem;
+		width: 20rem;
+		font-family: $font-stack;
+		border: 0;
+		color: #878a8d;
+		font-size: 1rem;
+		
+		padding-left: 2rem;
+	  }
+	  button {
+		text-transform: uppercase;
+	  }
+
+	  input[type="checkbox"] {
+		margin-top: 1.5rem;
+		height: 1rem;
+		width: 2rem;
+		background-color: green;
+	  }
+
+	  input[type="checkbox"]:checked {
+		margin-top: 1.5rem;
+		height: 1rem;
+		width: 2rem;
+		background-color: green;
+	  }
+	  
+}

@@ -2,6 +2,7 @@
   @import "config";
   @import "listings";
   @import "news";
+  @import "contact";
   @import "mobile";
   @import "mixins";
   @import "footer";
@@ -29,15 +30,75 @@ body {
         align-items: center;
         justify-content: space-between;
         width: 100%;
+        height: 65px;
+        background: rgb(255,255,255);
+        background: linear-gradient(90deg, rgba(255,255,255,1) 17%, rgba(47,52,74,0.7738445720084909) 61%, rgba(47,52,74,1) 100%);
+        //border: 1px solid yellow;
 
-        ul {
+        .brand-logo img {
+            width: 90px;
+            
+        }
+
+        ul#main-nav {
             display: flex;
             list-style-type: none;
         }
 
         li {
             padding: 15px;
+
+            .dropdown {
+                position: relative;
+                display: inline-block;
+               
+            }
+
+            
+
+            ul.nav-dropdown-menu {
+                display: none;
+                position: absolute;
+                background-color: #242947;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 999;
+                list-style-type: none;
+
+                li {
+                    text-decoration: none;
+                    margin: 0;
+                    padding: .2rem;
+                }
+              }
+
+             
+
+              .nav-dropdown-menu a {
+                color: #fff;
+                padding: 4px 16px;
+                text-decoration: none;
+                display: block;
+
+                &:hover {
+                    background-color: #ddd; 
+                }
+              }
+
+              .dropdown:hover ul.nav-dropdown-menu {display: block;}
+
+              .dropdown:hover .nav-dropdown-menu {
+                  display: block;
+              }
+
+              .dropdown .nav-dropdown-menu li {
+                display: block;
+            }
+
+
         }
+
+        
 
         a:hover {
             color: $accent-color;
@@ -56,9 +117,85 @@ body {
         margin-top: 30px;
 
         h1 {
-            font-size: 50px;
+            font-size: 3.5rem;
 
         }
+
+        &-image {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/hero-bg.jpg");
+            height: 50%;
+            width: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+          }
+
+          &-text {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+          }
+
+        //   &-search {
+        //     height: 30px;
+        //   }
+
+          form {
+            position: relative;
+            width: 30rem;
+            background: #131A36;
+            border-radius: .7rem;
+            margin: 0 auto;
+          }
+
+          input, button {
+            height: 3rem;
+            font-family: $font-stack;
+            border: 0;
+            color: #353A3F;
+            font-size: 1.3rem;
+          }
+
+          input[type="search"] {
+            outline: 0;
+            width: 100%;
+            background: $light-color;
+            padding: 0 1.6rem;
+            border-radius: .7rem;
+            appearance: none; //ios
+            transition: all .3s cubic-bezier(0, 0, 0.43, 1.49);;
+            transition-property: width, border-radius;
+            z-index: 1;
+            position: relative;
+          }
+
+          button {
+            display: none; // prevent being able to tab to it
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 6rem;
+            font-weight: bold;
+            background: $accent-color;
+            border-radius: 0 .7rem .7rem 0;
+            align-items: center;
+          }
+          input:not(:placeholder-shown) {
+            border-radius: .7rem 0 0 .7rem;
+            width: calc(100% - 8.5rem);
+            + button {
+              display: block;
+              display: flex;
+              align-items: center;
+              
+            }
+          }
+          
+          
     }
 
     
@@ -75,47 +212,31 @@ a {
     overflow: auto;
 }
 
-%btn {
-    display: inline-block;
-    border-radius: 5px;
-    padding: 8px 20px;
-    margin: 3px;
+// %btn {
+//     display: inline-block;
+//     border-radius: 5px;
+//     padding: 8px 20px;
+//     margin: 3px;
 
-    &:hover {
-        transform: scale(.98);
-    }
-}
+//     &:hover {
+//         transform: scale(.98);
+//     }
+// }
 
-.btn-primary {
-    @extend %btn;
-    background-color: lighten($primary-color, 10%);
-}
+// .btn-primary {
+//     @extend %btn;
+//     background-color: lighten($primary-color, 10%);
+// }
 
-.btn-secondary {
-    @extend %btn;
-    background-color: $secondary-color
-}
+// .btn-secondary {
+//     @extend %btn;
+//     background-color: $secondary-color
+// }
 
 
 
-.hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/hero-bg.jpg");
-  height: 50%;
-  width: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
 
-.hero-text {
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-}
+
 
 
 .main-nav {
@@ -151,6 +272,9 @@ a {
   .main-nav .icon {
     display: none;
   }
+
+ 
+
 
   
 

@@ -1,19 +1,38 @@
 .news {
-	background-color: $veryLightGray;
-}
+	background-image: url('/images/green-bg.png');
+	
+	
 
-.news {
-	&__grid {
+	&-content {
 		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	
+
+	&-heading h2 {
+		font-size: 2rem;
+		margin: 2rem 0 3.5rem 0;
+		color: #fff;
+		text-align: center;
+	
+	  //   @include breakpoint-up(large){
+	   //width: 60%;
+	  //   }
+	  }
+	&-grid {
+		display: flex;
+        width: 100%;
+        flex-wrap: wrap;
 		
 
-		@include breakpoint-up(medium) {
-			grid-template-columns: repeat(2, 1fr);
-		}
+		// @include breakpoint-up(medium) {
+		
+		// }
 
-		@include breakpoint-up(large) {
-			grid-template-columns: repeat(4, 1fr);
-		}
+		// @include breakpoint-up(large) {
+		
+		// }
 	}
 
 	&-item {
@@ -22,6 +41,9 @@
 		background-color: $white;
 		box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.15);
 		transition: all 150ms ease-in-out;
+        flex: 1;
+		margin: 0 .5rem;
+		
 
 		&:hover {
 			transform: scale(1.05);
@@ -39,9 +61,9 @@
 		padding: 1.875rem 1.875rem 2.5rem 1.875rem;
 		color: $grayishBlue;
 
-		@include breakpoint-up(medium) {
-			padding: 1.875rem 1.5625rem;
-		}
+		// @include breakpoint-up(medium) {
+		// 	padding: 1.875rem 1.5625rem;
+		// }
 	}
 
 	
@@ -54,5 +76,11 @@
 
 	&-desc {
 		font-size: 0.8125rem;
+	}
+
+	button {
+		border: none;
+		width: 10rem;
+		margin-top: 2rem;
 	}
 }

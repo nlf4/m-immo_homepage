@@ -6,7 +6,7 @@ $grayishBlue: hsl(233, 8%, 62%);
 $lightGrayishBlue: hsl(220, 16%, 96%);
 $veryLightGray: hsl(0, 0%, 98%);
 $white: #fff;
-$accent-color: #D1A617;
+$accent-color: #8DC63F;
 // Font Sizes
 $font-sm: 0.875rem; // 14px
 $font-med: 1.125rem; // 18px
@@ -18,10 +18,10 @@ $font-stack: Arial, Helvetica, sans-serif;
 $light-color: #f4f4f4;
 $primary-color: rgb(232, 232, 238);
 $secondary-color: rgb(136, 163, 36);
-$dark-color: #131A32;
+$dark-color: #353A3F;
 $medium-color: #404560;
 $light-color: #EAEEFF;
-$accent-color: #D1A617;
+//$accent-color: #D1A617;
 
 
 
@@ -155,8 +155,9 @@ html {
     position: relative;
     display: inline-block;
     padding: 0.875rem 2.1875rem;
-    background-image: linear-gradient(to right, $limeGreen, $brightCyan);
-    border: 0;
+    //background-image: linear-gradient(to right, $limeGreen, $brightCyan);
+    background-color: #131B36;
+    border: 1px solid $light-color;
     border-radius: 50px;
     cursor: pointer;
     color: $white;
