@@ -38,11 +38,16 @@
       align-items: flex-start;
       font-size: 0.9375rem;
       margin: 0 15px;
+      text-align: left;
   
       @include breakpoint-up(large) {
-        justify-content: space-between;
+        
         align-items: flex-start;
         
+      }
+
+      i {
+        margin-right: .3rem;
       }
   
      
@@ -89,7 +94,7 @@
     &-copyright {
       font-size: 0.8125rem;
       color: $grayishBlue;
-      margin-top: 3rem;
+      margin-top: 4rem;
   
       @include breakpoint-up(large) {
        

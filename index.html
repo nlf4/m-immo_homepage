@@ -72,7 +72,7 @@
                   <h1>M-IMMO HEET U WELKOM</h1>
                   <form onsubmit="event.preventDefault();" role="search">
                  
-                    <input id="hero-search" type="search" placeholder="Stad, Adres, Gemeente..." autofocus required />
+                    <input id="hero-search" type="search" placeholder="Stad, Adres, Gemeente..." autocomplete="off" required />
                     <button type="submit">Go</button>    
                   </form>
                   <!-- <input type="search" class="hero-search" placeholder="Stad, Adres, Gemeente...">
@@ -97,7 +97,7 @@
               <div class="listings-img">
                 <img src="/images/590.birdhouse_branches.jpg" />
               </div>
-              <div class="listings-itm-price">123.500</div>
+              <div class="listings-itm-price"><strong>€123.500</strong></div>
               <div class="listings-itm-desc">Appartement</div>
               <div class="listings-itm-address">Antwerpen</div>
             </div>
@@ -106,7 +106,7 @@
                 <div class="listings-img">
                   <img src="/images/177.3f88a25f-8a0c-4175-9169-5de0cfce7436_PMAS.jpg" />
                 </div>
-                <div class="listings-itm-price">155.000</div>
+                <div class="listings-itm-price"><strong>€155.000</strong></div>
                 <div class="listings-itm-desc">Appartement</div>
                 <div class="listings-itm-address">Overijse</div>
             </div>
@@ -115,7 +115,7 @@
                 <div class="listings-img">
                   <img src="/images/1.thumbnailCAWU8WVL.jpg" />
                 </div>
-                <div class="listings-itm-price">3.650.000</div>
+                <div class="listings-itm-price"><strong>€3.650.000</strong></div>
               <div class="listings-itm-desc">Woning</div>
               <div class="listings-itm-address">Schilde</div>
             </div>
@@ -188,7 +188,7 @@
                 
               <div>
                 <label>
-                  <input type="checkbox" checked="checked" name="subscribe"> Hou mij per e-mail op de hoogte van interessante info en acties
+                  <input type="checkbox" name="subscribe"> Hou mij per e-mail op de hoogte van interessante info en acties
                 </label>
               </div>
               
@@ -249,9 +249,11 @@
 
             <div class="ftr-nav-col">
                 <h4>Demo Max-Immo</h4>
-                <p>Vaartdijk 3/103<br/>
-                3018 Wijgmaal<br/>
-                BTW. BE 0465.382.442<br /></p>
+                <div>
+                  <div>Vaartdijk 3/103</div>
+                  <div>3018 Wijgmaal</div>
+                  <div>BTW.BE 0465.382.442</div>
+                </div>
                 <div><i class="fa fa-phone"></i><a href="tel:+3216894477">+32 16 89 44 77</a></div>
                 <div><i class="fa fa-fax"></i><a href="tel:+3216894478">+32 16 89 44 78</a></div>
                 <div><i class="fa fa-envelope"></i> <strong class="email"><a href="mailto:subscriptions@zimmo.be">subscriptions@zimmo.be</a></strong></div>
@@ -262,11 +264,10 @@
                 
                 <h4>Kantoor nummer 2</h4>
                 <div>
-                    <div>Vaartdijk 3 bus 103</div>
-                <div>3018 Leuven</div>
-                <div>BTW.BE 0465.382.442<br></div>
+                  <div>Vaartdijk 3 bus 103</div>
+                  <div>3018 Leuven</div>
+                  <div>BTW.BE 0465.382.442<br></div>
                 </div>
-                
                 <div><i class="fa fa-phone"></i><a href="tel:+3216894477">+32 16 89 44 77</a></div>
                 <div><i class="fa fa-fax"></i><a href="tel:+3216894478">+32 16 89 44 78</a></div>
                 <div><i class="fa fa-envelope"></i> <strong class="email"><a href="mailto:info@spiritus.be">info@spiritus.be</a></strong></div>
