@@ -1,6 +1,6 @@
 ## Re-design of M-Immo homepage using
 - HTML
-- SCSS
+- SASS
 - JS
 
 Clone repo and then open at http://localhost:5500
