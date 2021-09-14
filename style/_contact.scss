@@ -1,13 +1,57 @@
+@import "mixins";
+
 .contact {
 	background-color: $light-color;
 
-	form {
-		position: relative;
-		width: 40rem;
-		background: $light-color;
-		border-radius: .7rem;
-		margin: 0 auto;
-	  }
+	.contact-content {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.grid-row {
+		display: flex;
+  		flex-flow: row wrap;
+		justify-content: center;
+	}
+
+	.contact-itm {
+		
+		.itm1 {
+			flex-basis: 50%;
+			order: 1;
+			@include xs {
+				flex-basis: 100%;
+			}
+			@include md {
+				flex-basis: 50%;
+			}
+		}
+
+		.itm2 {
+			flex-basis: 50%;
+			order: 2;
+			@include xs {
+				flex-basis: 100%;
+				order: 3;
+			}
+			@include md {
+				flex-basis: 50%;
+				order: 2;
+			}
+		}
+
+		.itm3 {
+			flex-basis: 100%;
+			order: 3;
+			@include xs {
+				order: 2;
+			}
+			@include md {
+				order: 3; 
+			}
+		}
+	}
 
 	  input {
 		height: 3rem;
@@ -16,25 +60,31 @@
 		border: 0;
 		color: #878a8d;
 		font-size: 1rem;
-		
 		padding-left: 2rem;
+		@include xs {
+			margin-bottom: 2rem;
+			width: 28rem;
+		}
+		@include md {
+			margin-bottom: 0;
+			margin-right: .5rem;
+		}
 	  }
 	  button {
 		text-transform: uppercase;
+		width: 15rem;
+		@include xs {
+			width: 28rem;
+		}
+		@include md {
+			width: 15rem;
+		}
 	  }
 
 	  input[type="checkbox"] {
 		margin-top: 1.5rem;
 		height: 1rem;
 		width: 2rem;
-		background-color: green;
-	  }
-
-	  input[type="checkbox"]:checked {
-		margin-top: 1.5rem;
-		height: 1rem;
-		width: 2rem;
-		background-color: green;
 	  }
 	  
 }

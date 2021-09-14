@@ -1,3 +1,5 @@
+@import "mixins";
+
 .ftr {
     background-color: $dark-color;
     color: $white;
@@ -7,34 +9,25 @@
     flex-direction: column;
   
     .container {
-      @include breakpoint-up(large) {
-        display: flex;
-        flex-direction: row;
-        
-      }
+      width: 100%;
     }
-  
+
+    .grid-row {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+    }
+
     a {
       color: $white;
     }
   
     &-logo {
       display: inline-block;
-
       img {
         width: 100px;
-      }
-      
-  
-      @include breakpoint-down(medium) {
-        margin-bottom: 1.875rem;
-      }
-  
-      @include breakpoint-up(large) {
-        
-      }
+      } 
     }
-  
   
     &-nav-col {
       display: flex;
@@ -42,24 +35,48 @@
       justify-content: flex-start;
       align-items: flex-start;
       font-size: 0.9375rem;
-      margin: 0 15px;
+      margin: 0 18px;
       text-align: left;
-  
-      @include breakpoint-up(large) {
-        
-        align-items: flex-start;
-        
+      flex-basis: 16%;
+      
+      &.logo-social {
+        order: 1;
+       
+        @include xs {
+         order: 6;
+        }
+
+        @include md {
+          &.logo-social{
+            order: 1;
+          }
+          
+         }
+      }
+
+      .col1 {
+        order: 2;
+      }
+
+      .col2 {
+        order: 3;
+      }
+
+      .col3 {
+        order: 4;
+      }
+
+      .col4 {
+        order: 5;
       }
 
       i {
         margin-right: .3rem;
       }
   
-     
       a {
         line-height: 2.25;
         transition: color 150ms ease-in-out;
-  
         &:hover {
           color: $accent-color;
         }
@@ -67,17 +84,7 @@
     }
 
     &-social {
-
         margin-top: 1.875rem;
-        @include breakpoint-down(medium) {
-          margin-bottom: 1.875rem;
-          
-        }
-    
-        @include breakpoint-up(large) {
-          
-        }
-    
         a {
           display: inline-block;
           height: 1.25rem;
@@ -97,16 +104,9 @@
       }
   
     &-copyright {
-      font-size: 0.8125rem;
-      color: $grayishBlue;
+      font-size: 0.82rem;
+      color: $light-gray;
       margin-top: 4rem;
-  
-      @include breakpoint-up(large) {
-       
-        
-      }
     }
-  
-    
   }
   

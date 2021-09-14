@@ -1,0 +1,240 @@
+@import "mixins";
+
+.main-header {
+    background-color: $primary-color;
+    color: #fff;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url("/images/hero-bg.jpg");
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 70px;
+        padding: 0 2rem;
+        background: rgb(255,255,255);
+        background: linear-gradient(90deg, rgba(255,255,255,1) 17%, rgba(47,52,74,0.7738445720084909) 61%, (#151931) 100%);
+      
+        @include xs {
+            background: none;
+            background-color: #fff;
+            // ul#main-nav {
+            //     display: none;
+            // }
+            // .menu-toggle {
+            //     display: block;
+            // }
+          }
+
+        @include sm {
+            background: rgb(255,255,255);
+            background: linear-gradient(90deg, rgba(255,255,255,1) 17%, rgba(47,52,74,0.7738445720084909) 61%, (#151931) 100%);
+        }
+
+        .brand-logo img {
+            width: 100px;
+        }
+
+        ul#main-nav {
+            display: flex;
+            list-style-type: none;
+            background: none;
+            overflow: hidden;
+            @include xs {display: none;}
+            @include sm {display: flex;}
+
+            .responsive {
+                @include xs {position: relative;}
+                display: flex;
+                .menu-toggle {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                }
+                
+            }
+        }
+
+       
+        ul#main-nav.responsive .menu-toggle {
+            position: absolute;
+                    right: 0;
+                    top: 0;
+        }
+
+        ul#main-nav.responsive li {
+            display: block;
+        }
+        ul#main-nav.responsive {
+            display: block;
+            background-color: #353A3F;
+            @include xs {position: relative;}
+        }
+
+        .menu-toggle { 
+            font-size: 1.5rem;
+            display: none;
+            @include xs {display: block;}
+            @include sm {display: none;}
+            color: $dark-color;
+        }
+
+        li {
+            padding: 15px;
+            display: block;
+            @include xs {display: none;}
+            @include sm {display: block;}
+
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+
+            ul.nav-dropdown-menu {
+                display: none;
+                position: absolute;
+                background-color: #242947;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 999;
+                list-style-type: none;
+
+                li {
+                    text-decoration: none;
+                    margin: 0;
+                    padding: .2rem;
+                }
+              }
+
+              .nav-dropdown-menu a {
+                color: #fff;
+                padding: 4px 16px;
+                text-decoration: none;
+                display: block;
+
+                &:hover {
+                    background-color: #ddd; 
+                }
+              }
+
+              .dropdown:hover ul.nav-dropdown-menu {
+                  display: block;
+                }
+
+              .dropdown .nav-dropdown-menu li {
+                display: block;
+            }
+        }
+
+        a:hover {
+            color: $accent-color;
+        }
+    }
+
+    a {
+        color: #fff;
+    }
+
+    .hero {
+        height: 900px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+
+        h1 {
+            font-size: 3.5rem;
+        }
+
+          &-text {
+            text-align: center;
+            position: relative;
+            margin-bottom: 20rem;
+            color: white;
+            @include xs {
+                width: 80%;
+            }
+
+            @include sm {
+                width: 100%;
+            }
+          }
+
+          form {
+            position: relative;
+            width: 30rem;
+            //background: #182344;
+            border-radius: 1.3rem;
+            margin: 2rem auto 0 auto;
+            @include xs {
+                width: 100%;
+            }
+
+            @include sm {
+                width: 30rem;
+            }
+          }
+
+          input, button {
+            height: 3rem;
+            font-family: $font-stack;
+            border: 0;
+            color: #353A3F;
+            font-size: 1.3rem;
+          }
+
+          input[type="search"] {
+            outline: 0;
+            width: 100%;
+            background: #fff;
+            padding: 0 1.6rem;
+            border-radius: 1.3rem;
+            appearance: none; //ios
+            transition: all .3s cubic-bezier(0, 0, 0.43, 1.49);;
+            transition-property: width, border-radius;
+            z-index: 1;
+            position: relative;
+
+                @include xs {
+                    width: 80%;
+                }
+
+                @include sm {
+                    width: 100%;
+                }
+          }
+
+          button {
+            display: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 6rem;
+            font-weight: bold;
+            background: $accent-color;
+            border-radius: 0 1.3rem 1.3rem 0;
+            align-items: center;
+          }
+
+          input:not(:placeholder-shown) {
+            border-radius: 1.3 0 0 1.3rem;
+            width: calc(100% - 8.5rem);
+            + button {
+              display: block;
+              display: flex;
+              align-items: center;
+            }
+          }
+    } 
+}
+
+a {
+    text-decoration: none;
+}
+
+.header-container {
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: auto;
+}

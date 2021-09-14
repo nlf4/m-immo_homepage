@@ -1,1 +1,4 @@
-# m-immo_homepage
+## Re-design of M-Immo homepage using
+- HTML
+- SCSS
+- JS

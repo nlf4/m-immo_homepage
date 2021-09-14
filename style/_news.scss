@@ -1,3 +1,5 @@
+@import "mixins";
+
 .news {
 	background-image: url('/images/green-bg.png');
 	
@@ -12,24 +14,22 @@
 		margin: 2rem 0 3.5rem 0;
 		color: #fff;
 		text-align: center;
-	
-	  //   @include breakpoint-up(large){
-	   //width: 60%;
-	  //   }
-	  }
+		@include xs {
+			font-size: 2rem;
+		}
+		@include md {
+			font-size: 2.5rem;
+		}
+	}
+
 	&-grid {
-		display: flex;
         width: 100%;
-        flex-wrap: wrap;
-		
+	}
 
-		// @include breakpoint-up(medium) {
-		
-		// }
-
-		// @include breakpoint-up(large) {
-		
-		// }
+	.grid-row {
+		display: flex;
+  		flex-flow: row wrap;
+		justify-content: center;
 	}
 
 	&-item {
@@ -38,13 +38,43 @@
 		background-color: $white;
 		box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.15);
 		transition: all 150ms ease-in-out;
-        flex: 1;
+        flex-basis: 30%;
 		margin: 0 .8rem;
 		
-
 		&:hover {
 			transform: scale(1.05);
 		}
+
+		@include xs {
+			flex-basis: 100%;
+			margin-bottom: 1rem;
+			&:hover {
+				transform: none;
+			}
+		}
+
+		@include sm {
+			flex-basis: 100%;
+			&:hover {
+				transform: none;
+			}
+		}
+
+		@include md {
+			flex-basis: 50%;
+			&:hover {
+				transform: scale(1.05);
+			}
+		}
+
+		@include lg {
+			flex-basis: 29%;
+		}
+
+		@include xl {
+			flex-basis: 29%;
+		}
+
 	}
 
 	&-img {
@@ -56,18 +86,13 @@
 
 	&-text {
 		padding: 1.875rem 1.875rem 2.5rem 1.875rem;
-		color: $grayishBlue;
-
-		// @include breakpoint-up(medium) {
-		// 	padding: 1.875rem 1.5625rem;
-		// }
+		color: $light-gray;
 	}
 
-	
 	&-title {
 		font-size: 1.0625rem;
 		line-height: 1.2;
-		color: $darkBlue;
+		color: $dark-blue;
 		margin-bottom: 0.5rem;
 	}
 
@@ -79,5 +104,13 @@
 		border: none;
 		width: 10rem;
 		margin-top: 3rem;
+
+		@include xs {
+			width: 100%;
+		}
+
+		@include md {
+			width: 10rem;
+		}
 	}
 }
