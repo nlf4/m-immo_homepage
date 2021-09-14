@@ -19,12 +19,6 @@
         @include xs {
             background: none;
             background-color: #fff;
-            // ul#main-nav {
-            //     display: none;
-            // }
-            // .menu-toggle {
-            //     display: block;
-            // }
           }
 
         @include sm {
@@ -47,11 +41,11 @@
             .responsive {
                 @include xs {position: relative;}
                 display: flex;
-                .menu-toggle {
-                    position: absolute;
-                    right: 0;
-                    top: 0;
-                }
+                // .menu-toggle {
+                //     position: absolute;
+                //     right: 0;
+                //     top: 100px;
+                // }
                 
             }
         }
@@ -59,8 +53,8 @@
        
         ul#main-nav.responsive .menu-toggle {
             position: absolute;
-                    right: 0;
-                    top: 0;
+            right: 0;
+            top: 100px;
         }
 
         ul#main-nav.responsive li {

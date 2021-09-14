@@ -34,11 +34,19 @@
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
-      font-size: 0.9375rem;
+      font-size: 0.9rem;
       margin: 0 18px;
       text-align: left;
       flex-basis: 16%;
-      
+      @include xs {
+        margin-bottom: 2rem;
+        flex-basis: 38%;
+       }
+       @include md {
+        margin: 0 18px;
+        flex-basis: 16%;
+       }
+
       &.logo-social {
         order: 1;
        
